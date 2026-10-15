@@ -12,20 +12,32 @@ import ProcessSection from './components/ProcessSection';
 import WhyChooseMe from './components/WhyChooseMe';
 import CtaFooter from './components/CtaFooter';
 import ProjectModal from './components/ProjectModal';
+import ServiceModal from './components/ServiceModal';
 import Toast from './components/Toast';
+import BackToTop from './components/BackToTop';
 
 export default function App() {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedService, setSelectedService] = useState(null);
   const [toastMessage, setToastMessage] = useState(null);
 
-  // Initialize Lenis Smooth Scroll
+  // Initialize Lenis Smooth Scroll and guarantee scroll to top on reload
   useEffect(() => {
+    // Disable browser automatic scroll restoration so refresh always starts at top
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: 'vertical',
       smoothWheel: true,
     });
+
+    window.__lenis = lenis;
+    lenis.scrollTo(0, { immediate: true });
 
     let animationFrameId;
 
@@ -36,8 +48,15 @@ export default function App() {
 
     animationFrameId = requestAnimationFrame(raf);
 
+    const handleBeforeUnload = () => {
+      window.scrollTo(0, 0);
+    };
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
     return () => {
       cancelAnimationFrame(animationFrameId);
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+      window.__lenis = null;
       lenis.destroy();
     };
   }, []);
@@ -50,7 +69,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white selection:bg-[#10d9a0] selection:text-black relative">
+    <div className="min-h-screen w-full max-w-full overflow-x-hidden bg-[#0a0a0a] text-white selection:bg-[#10d9a0] selection:text-black relative">
       
       {/* Page Load Intro Animation */}
       <PageIntro />
@@ -71,7 +90,7 @@ export default function App() {
       <AboutImpact />
 
       {/* 4. SERVICES / COMPÉTENCES (Near-Black Section with Numbered Rows) */}
-      <ServicesSection />
+      <ServicesSection onSelectService={(s) => setSelectedService(s)} />
 
       {/* 5. PROJETS (Off-White Section with Asymmetric Polaroid Masonry) */}
       <ProjectsSection onSelectProject={(p) => setSelectedProject(p)} />
@@ -91,8 +110,17 @@ export default function App() {
         onClose={() => setSelectedProject(null)}
       />
 
+      {/* Service Detail Modal */}
+      <ServiceModal
+        service={selectedService}
+        onClose={() => setSelectedService(null)}
+      />
+
       {/* Interactive Toast Notifications */}
       <Toast message={toastMessage} />
+
+      {/* Floating Return to Top Button */}
+      <BackToTop />
 
     </div>
   );

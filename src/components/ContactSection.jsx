@@ -13,7 +13,7 @@ export default function ContactSection({ onShowToast }) {
     playSuccess();
     navigator.clipboard.writeText(personalInfo.email);
     setCopiedEmail(true);
-    onShowToast(`Email copié : ${personalInfo.email} ✓`);
+    onShowToast(`Email copié : ${personalInfo.email}`);
     setTimeout(() => setCopiedEmail(false), 2400);
   };
 
@@ -21,7 +21,7 @@ export default function ContactSection({ onShowToast }) {
     playSuccess();
     navigator.clipboard.writeText(personalInfo.phone);
     setCopiedPhone(true);
-    onShowToast(`Téléphone copié : ${personalInfo.phone} ✓`);
+    onShowToast(`Téléphone copié : ${personalInfo.phone}`);
     setTimeout(() => setCopiedPhone(false), 2400);
   };
 
@@ -66,7 +66,7 @@ export default function ContactSection({ onShowToast }) {
                   <div className="text-[11px] text-slate-400 font-mono">Email direct</div>
                   <a
                     href={`mailto:${personalInfo.email}`}
-                    className="text-xs sm:text-sm font-mono font-medium text-white hover:text-emerald-400 transition-colors"
+                    className="text-xs sm:text-sm font-mono font-medium lowercase text-white hover:text-emerald-400 transition-colors"
                   >
                     {personalInfo.email}
                   </a>

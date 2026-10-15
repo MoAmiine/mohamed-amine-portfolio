@@ -4,67 +4,179 @@ export const personalData = {
   fullName: "Mohamed Amine Teljaoui",
   year: "©2026",
   taglineSmall: "JE CONÇOIS DES APPLICATIONS WEB SÉCURISÉES, RAPIDES ET ÉLÉGANTES.",
-  role: "Développeur Full-Stack (MERN & Laravel)",
-  status: "Disponible Lun–Ven pour Projets & Missions",
+  role: "Développeur Full-Stack (spécialité MERN)",
+  status: "En recherche active d'un emploi (Contrat / CDI)",
+  statusSub: "Également ouvert aux missions Freelance",
   school: "YouCode UM6P (Campus Youssoufia)",
   email: "medamine.teljaoui@gmail.com",
-  phone: "+212 601818233",
+  phone: "+212 634-555918",
   location: "Marrakech / Youssoufia, Maroc",
-  bio: "ÉTUDIANT EN 2ÈME ANNÉE À YOUCODE (UM6P) EN DÉVELOPPEMENT WEB FULL-STACK, SPÉCIALISÉ DANS MERN STACK (MONGODB, EXPRESS, REACT, NODE.JS) ET LARAVEL. EXPÉRIMENTÉ DANS LA CRÉATION D'APPLICATIONS SÉCURISÉES, D'INTERFACES INTERACTIVES ET DE SYSTÈMES BACKEND ROBUSTES. FORT INTÉRÊT POUR LE CODE PROPRE, LA SÉCURITÉ APPLICATIVE ET LA GESTION DE BASES DE DONNÉES.",
+  bio: "DÉVELOPPEUR FULL-STACK SPÉCIALISÉ MERN (MONGODB, EXPRESS, REACT, NODE.JS) ET LARAVEL. EXPÉRIMENTÉ DANS LA CRÉATION D'APPLICATIONS SÉCURISÉES, D'INTERFACES INTERACTIVES ET DE SYSTÈMES BACKEND ROBUSTES. FORT INTÉRÊT POUR LE CODE PROPRE, LA SÉCURITÉ APPLICATIVE (OWASP), DOCKER ET LA GESTION DE BASES DE DONNÉES.",
   socials: {
     github: "https://github.com/MoAmiine",
-    linkedin: "https://linkedin.com/in/mohamed-amine-teljaoui",
+    linkedin: "https://www.linkedin.com/in/mohamed-amine-teljaoui-6b3592396/",
     instagram: "https://instagram.com",
     tiktok: "https://tiktok.com"
   },
   stats: [
     { number: "36+", label: "PROJETS RÉALISÉS", sub: "Dépôts GitHub & YouCode" },
-    { number: "02+", label: "ANNÉES D'ÉTUDE INTENSIVE", sub: "YouCode UM6P" },
+    { number: "02+", label: "ANNÉES D'EXPERTISE ACTIVE", sub: "Full-Stack MERN & Laravel" },
     { number: "100%", label: "SÉCURITÉ & CLEAN CODE", sub: "OWASP / XSS / CSRF" }
   ]
 };
 
 export const marqueeTech = [
-  { name: "React.js", symbol: "⚛" },
-  { name: "Node.js", symbol: "🟢" },
-  { name: "MongoDB", symbol: "🍃" },
-  { name: "Express.js", symbol: "⚡" },
-  { name: "Laravel", symbol: "🔺" },
-  { name: "PHP 8", symbol: "🐘" },
-  { name: "PostgreSQL", symbol: "🐘" },
-  { name: "Tailwind CSS", symbol: "🌊" },
-  { name: "JavaScript ES6+", symbol: "JS" },
-  { name: "Docker", symbol: "🐳" },
-  { name: "RESTful APIs", symbol: "🔗" }
+  { name: "React.js", icon: "react" },
+  { name: "Node.js", icon: "node" },
+  { name: "MongoDB", icon: "mongo" },
+  { name: "Express.js", icon: "express" },
+  { name: "Laravel", icon: "laravel" },
+  { name: "Docker", icon: "docker" },
+  { name: "PHP 8", icon: "php" },
+  { name: "PostgreSQL", icon: "postgres" },
+  { name: "Tailwind CSS", icon: "tailwind" },
+  { name: "JavaScript ES6+", icon: "js" },
+  { name: "Git", icon: "git" }
 ];
 
 export const servicesData = [
   {
+    id: "mern",
     num: "001",
-    title: "DÉVELOPPEMENT MERN STACK",
-    description: "Conception complète d'applications web de bout en bout associant la réactivité de React.js et la puissance de Node.js, Express et MongoDB. Rendu ultra-rapide et interfaces dynamiques.",
-    tags: ["React.js", "Node.js", "Express.js", "MongoDB", "REST APIs"],
+    title: "DÉVELOPPEMENT FULL-STACK MERN",
+    subtitle: "Applications web end-to-end ultra-réactives & scalables",
+    description: "Conception complète d'applications web modernes associant la puissance asynchrone de Node.js / Express, la flexibilité NoSQL de MongoDB et l'interactivité dynamique de React.js.",
+    longDescription: "Je conçois et déploie des architectures MERN modulaires et scalables prêtes pour la production. Chaque composant est optimisé : gestion d'état centralisée côté client, routage performant, API RESTful sécurisée avec middlewares de validation, et schémas NoSQL Mongoose pensés pour les performances de lecture/écriture.",
+    deliverables: [
+      "Application Single Page (SPA) ultra-rapide avec React.js",
+      "API RESTful modulaire et haute disponibilité sous Node.js & Express",
+      "Schémas NoSQL MongoDB avec validation de schéma et indexation",
+      "Authentification robuste par JWT et cookies SameSite sécurisés",
+      "Architecture Clean Code découplée et documentée"
+    ],
+    technologies: [
+      { name: "React.js", role: "Interface utilisateur dynamique & composants réactifs", icon: "react" },
+      { name: "Node.js", role: "Moteur d'exécution backend asynchrone haute performance", icon: "node" },
+      { name: "Express.js", role: "Framework API REST & chaîne de middlewares", icon: "express" },
+      { name: "MongoDB", role: "Base de données NoSQL scalable & agrégations", icon: "mongo" },
+      { name: "Docker", role: "Conteneurisation de la stack MERN", icon: "docker" }
+    ],
+    tags: ["React.js", "Node.js", "Express.js", "MongoDB", "REST APIs", "Docker"],
     image: "/images/services/service-mern.jpg"
   },
   {
+    id: "docker",
     num: "002",
-    title: "BACKEND & ARCHITECTURE LARAVEL",
-    description: "Développement d'APIs RESTful robustes et sécurisées avec Laravel Sanctum, modélisation relationnelle MySQL, contrôle d'accès basé sur les rôles et pattern MVC strict.",
-    tags: ["Laravel", "PHP 8", "Sanctum Auth", "MySQL", "Architecture MVC"],
-    image: "/images/services/service-laravel.jpg"
-  },
-  {
-    num: "003",
-    title: "SÉCURITÉ WEB & BASES DE DONNÉES",
-    description: "Protection applicative proactive contre l'OWASP Top 10 : atténuation XSS, tokens CSRF, politiques CSP et cookies SameSite. Modélisation relationnelle PostgreSQL et NoSQL.",
-    tags: ["XSS / CSRF Mitigation", "CSP Headers", "SameSite", "PostgreSQL", "UML DCU/DC"],
+    title: "DEVOPS, DOCKER & CONTENEURISATION",
+    subtitle: "Environnements isolés, reproductibles et déploiements fiables",
+    description: "Conteneurisation complète de vos architectures multi-services avec Docker & Docker Compose pour des déploiements fluides, sans friction et strictement reproductibles.",
+    longDescription: "Éliminez définitivement les écarts entre les environnements de développement et de production. Élaboration de Dockerfiles multi-stage ultra-légers, orchestration de microservices (frontend React, API Node/Laravel, bases MongoDB/PostgreSQL) avec Docker Compose et mise en place de flux d'automatisation Git.",
+    deliverables: [
+      "Dockerfiles optimisés en multi-stage build pour des images minimales",
+      "Orchestration multi-conteneurs avec Docker Compose",
+      "Isolation des réseaux virtuels et volumes persistants pour les bases",
+      "Gestion sécurisée des variables d'environnement (.env)",
+      "Configuration de reverse-proxy Nginx et certificats SSL"
+    ],
+    technologies: [
+      { name: "Docker", role: "Conteneurisation et standardisation d'environnements", icon: "docker" },
+      { name: "Git", role: "Gestion de versions & automatisation", icon: "git" },
+      { name: "Node.js", role: "Applications serveur conteneurisées", icon: "node" },
+      { name: "MongoDB", role: "Stockage persistant isolé en conteneur", icon: "mongo" }
+    ],
+    tags: ["Docker", "Docker Compose", "DevOps", "Git", "GitHub Actions", "Linux"],
     image: "/images/services/service-security.jpg"
   },
   {
+    id: "database",
+    num: "003",
+    title: "BASES DE DONNÉES MONGODB & SQL",
+    subtitle: "Architecture NoSQL MongoDB, PostgreSQL & Modélisation UML",
+    description: "Conception, modélisation relationnelle et NoSQL optimisée. Structuration des collections MongoDB, requêtes PostgreSQL complexes, indexation et diagrammes UML.",
+    longDescription: "La fiabilité d'une plateforme repose sur la modélisation de ses données. J'élabore des schémas NoSQL performants avec MongoDB adaptés aux gros volumes et flux temps réel, ainsi que des schémas relationnels normalisés en 3NF sous PostgreSQL et MySQL. Chaque base est étayée par une modélisation UML rigoureuse (DC & DCU).",
+    deliverables: [
+      "Modélisation de collections NoSQL et pipelines d'agrégation MongoDB",
+      "Schémas relationnels normalisés (3NF) sous PostgreSQL & MySQL",
+      "Diagrammes de classes UML et cas d'utilisation (DC & DCU)",
+      "Stratégies d'indexation pour réduire la latence des requêtes",
+      "Sécurité des accès, intégrité référentielle et transactions ACID"
+    ],
+    technologies: [
+      { name: "MongoDB", role: "Base de données NoSQL documents & haute scalabilité", icon: "mongo" },
+      { name: "PostgreSQL", role: "SGBD relationnel avancé & intégrité stricte", icon: "postgres" },
+      { name: "Node.js", role: "Connecteurs ODM Mongoose & requêtage asynchrone", icon: "node" },
+      { name: "Docker", role: "Déploiement de bases isolées en conteneurs", icon: "docker" }
+    ],
+    tags: ["MongoDB NoSQL", "PostgreSQL", "SQL / MySQL", "Modélisation UML", "Indexation"],
+    image: "/images/services/service-laravel.jpg"
+  },
+  {
+    id: "laravel",
     num: "004",
-    title: "INTERFACES REACT & DESIGN SYSTEMS",
-    description: "Intégration pixel-perfect, accessibilité, composants réutilisables avec Tailwind CSS, Vue.js, animations fluides et gestion d'état local via l'API de stockage web.",
-    tags: ["Tailwind CSS", "Vue.js", "Bootstrap", "Web Storage API", "Responsive"],
+    title: "BACKEND & ARCHITECTURE LARAVEL",
+    subtitle: "APIs RESTful sécurisées, architecture MVC & Laravel Sanctum",
+    description: "Développement d'applications et d'APIs d'entreprise robustes avec PHP 8 et Laravel. Architecture MVC rigoureuse, contrôle d'accès basé sur les rôles et authentification Sanctum.",
+    longDescription: "Conception de backends structurés et extensibles avec le framework PHP le plus éprouvé de l'industrie. Création d'APIs RESTful documentées, intégration de middlewares personnalisés, validation stricte des requêtes entrantes avec Form Requests et modélisation relationnelle avec Eloquent ORM.",
+    deliverables: [
+      "Architecture logicielle MVC stricte respectant les principes SOLID",
+      "APIs RESTful sécurisées avec authentification Laravel Sanctum",
+      "Gestion des rôles et permissions (RBAC) via Policies et Gates",
+      "Contrôle et validation stricte des formulaires et requêtes",
+      "Tests d'API complets avec Postman"
+    ],
+    technologies: [
+      { name: "Laravel", role: "Framework backend PHP d'entreprise", icon: "laravel" },
+      { name: "PHP 8", role: "Langage backend moderne typé", icon: "php" },
+      { name: "PostgreSQL", role: "Base de données relationnelle robuste", icon: "postgres" },
+      { name: "Docker", role: "Environnement d'exécution isolé", icon: "docker" }
+    ],
+    tags: ["Laravel", "PHP 8", "Sanctum Auth", "MySQL", "Architecture MVC", "SOLID"],
+    image: "/images/services/service-laravel.jpg"
+  },
+  {
+    id: "security",
+    num: "005",
+    title: "SÉCURITÉ WEB APPLICATIVE (OWASP)",
+    subtitle: "Protection préventive contre les vulnérabilités XSS, CSRF & injections",
+    description: "Audit et blindage de vos applications web selon les standards OWASP. Mise en place de Content Security Policy (CSP), cookies SameSite sécurisés et validation des flux entrants.",
+    longDescription: "La sécurité n'est pas une couche optionnelle ajoutée après coup, mais un principe d'ingénierie intégré dès la première ligne de code. J'implémente des défenses actives contre l'altération de sessions, l'injection de scripts (XSS), la falsification de requêtes (CSRF) et les fuites d'en-têtes HTTP sensibles.",
+    deliverables: [
+      "Atténuation systématique des vulnérabilités Cross-Site Scripting (XSS)",
+      "Protection anti-CSRF avec synchronisation et rotation des tokens",
+      "En-têtes HTTP sécurisés (Content-Security-Policy, HSTS, X-Frame-Options)",
+      "Gestion de sessions avec cookies HttpOnly, Secure & SameSite=Strict",
+      "Sanitisation et filtrage strict des données entrantes"
+    ],
+    technologies: [
+      { name: "Node.js", role: "Middlewares Helmet, validation & rate-limiting", icon: "node" },
+      { name: "Express.js", role: "Sécurisation de la chaîne de routage HTTP", icon: "express" },
+      { name: "MongoDB", role: "Protection contre les injections NoSQL", icon: "mongo" },
+      { name: "Laravel", role: "Protections CSRF & XSS natives du framework", icon: "laravel" }
+    ],
+    tags: ["OWASP Top 10", "Atténuation XSS", "Tokens CSRF", "CSP Headers", "SameSite"],
+    image: "/images/services/service-security.jpg"
+  },
+  {
+    id: "ui",
+    num: "006",
+    title: "INTERFACES REACT, VUE & DESIGN SYSTEMS",
+    subtitle: "Expériences utilisateur immersives, fluides et pixel-perfect",
+    description: "Création d'interfaces web ultra-dynamiques avec React.js, Tailwind CSS et Vue.js. Micro-interactions fluides, responsive design absolu et stockage local via l'API Web Storage.",
+    longDescription: "Développement d'interfaces visuellement percutantes inspirées des standards éditoriaux internationaux. Accessibilité soignée, animations 60 FPS fluides, composants atomiques réutilisables et persistance d'état côté client avec l'API Web Storage (localStorage / sessionStorage).",
+    deliverables: [
+      "Intégration d'interfaces pixel-perfect sur-mesure",
+      "Design systems modulaires et réutilisables avec Tailwind CSS",
+      "Animations interactives fluides 60 FPS",
+      "Persistance d'état côté client via l'API Web Storage",
+      "Ergonomie responsive irréprochable sur mobile, tablette et desktop"
+    ],
+    technologies: [
+      { name: "React.js", role: "Composants d'interface réactifs & hooks", icon: "react" },
+      { name: "Tailwind CSS", role: "Stylisation utilitaire moderne & design system", icon: "tailwind" },
+      { name: "Vue.js", role: "Interfaces modulaires réactives", icon: "vue" },
+      { name: "JavaScript ES6+", role: "Logique frontend moderne & API Web Storage", icon: "js" }
+    ],
+    tags: ["Tailwind CSS", "Vue.js", "Bootstrap", "Web Storage API", "Responsive UI"],
     image: "/images/services/service-ui.jpg"
   }
 ];
@@ -145,25 +257,21 @@ export const projectsList = [
 export const processSteps = [
   {
     step: "01",
-    icon: "✦",
     title: "ANALYSE",
     desc: "Analyse approfondie des besoins fonctionnels, modélisation avec diagrammes UML (DCU: Cas d'Utilisation, DC: Classes) et spécifications techniques."
   },
   {
     step: "02",
-    icon: "✱",
     title: "CONCEPTION",
     desc: "Architecture logicielle MVC & modulaire, structuration relationnelle (PostgreSQL, MySQL) ou NoSQL (MongoDB) et définition des contrats d'APIs REST."
   },
   {
     step: "03",
-    icon: "✚",
     title: "DÉVELOPPEMENT",
     desc: "Développement Full-Stack propre et sécurisé (React.js, Node.js, Laravel). Application stricte des protections OWASP (XSS, CSRF, CSP, SameSite)."
   },
   {
     step: "04",
-    icon: "✦",
     title: "AMÉLIORATION",
     desc: "Tests d'intégration avec Postman, conteneurisation Docker, révisions de code et rituels agiles SCRUM (Jira, Trello, Miro, Figma) pour une qualité optimale."
   }

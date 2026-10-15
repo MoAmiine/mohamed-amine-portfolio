@@ -1,5 +1,32 @@
 import React from 'react';
 import { marqueeTech } from '../data/portfolioData';
+import { 
+  ReactIcon, 
+  NodeIcon, 
+  MongoIcon, 
+  ExpressIcon, 
+  LaravelIcon, 
+  PhpIcon, 
+  PostgresIcon, 
+  TailwindIcon, 
+  JsIcon, 
+  DockerIcon, 
+  GitIcon 
+} from './Icons';
+
+const iconMap = {
+  react: ReactIcon,
+  node: NodeIcon,
+  mongo: MongoIcon,
+  express: ExpressIcon,
+  laravel: LaravelIcon,
+  docker: DockerIcon,
+  php: PhpIcon,
+  postgres: PostgresIcon,
+  tailwind: TailwindIcon,
+  js: JsIcon,
+  git: GitIcon,
+};
 
 export default function TechMarquee() {
   const repeatedTech = [...marqueeTech, ...marqueeTech, ...marqueeTech];
@@ -18,18 +45,23 @@ export default function TechMarquee() {
       {/* Infinite Marquee Track */}
       <div className="flex overflow-hidden w-full mask-marquee">
         <div className="animate-marquee flex items-center gap-10 whitespace-nowrap">
-          {repeatedTech.map((item, idx) => (
-            <div
-              key={idx}
-              className="flex items-center gap-3 text-neutral-500 hover:text-black hover:scale-105 transition-all duration-200 cursor-pointer group"
-            >
-              <span className="text-base group-hover:text-[#10d9a0] transition-colors">{item.symbol}</span>
-              <span className="text-xs sm:text-sm font-display font-black tracking-tight uppercase">
-                {item.name}
-              </span>
-              <span className="text-neutral-300 ml-4 font-mono">/</span>
-            </div>
-          ))}
+          {repeatedTech.map((item, idx) => {
+            const IconComponent = iconMap[item.icon];
+            return (
+              <div
+                key={idx}
+                className="flex items-center gap-2.5 text-neutral-600 hover:text-black hover:scale-105 transition-all duration-200 cursor-pointer group"
+              >
+                <span className="w-5 h-5 flex items-center justify-center text-neutral-500 group-hover:text-[#10d9a0] transition-colors shrink-0">
+                  {IconComponent ? <IconComponent className="w-4 h-4" /> : null}
+                </span>
+                <span className="text-xs sm:text-sm font-display font-black tracking-tight uppercase">
+                  {item.name}
+                </span>
+                <span className="text-neutral-300 ml-4 font-mono">/</span>
+              </div>
+            );
+          })}
         </div>
       </div>
 

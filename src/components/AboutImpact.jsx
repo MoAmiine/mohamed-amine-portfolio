@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { personalData } from '../data/portfolioData';
+import { Sparkles } from 'lucide-react';
 
 export default function AboutImpact() {
   const containerRef = useRef(null);
@@ -16,9 +17,9 @@ export default function AboutImpact() {
     <section
       id="about"
       ref={containerRef}
-      className="w-full bg-[#f6f6f4] text-black py-28 px-6 sm:px-12 lg:px-16 border-b border-neutral-300 relative select-none"
+      className="w-full bg-[#f6f6f4] text-black py-16 sm:py-28 px-4 sm:px-12 lg:px-16 border-b border-neutral-300 relative select-none"
     >
-      <div className="max-w-7xl mx-auto space-y-20">
+      <div className="max-w-7xl mx-auto space-y-12 sm:space-y-20">
         
         {/* Top Section Pill */}
         <div className="flex items-center justify-between">
@@ -32,7 +33,7 @@ export default function AboutImpact() {
         </div>
 
         {/* Main Grid: Huge 3-Line Title + Asterisk/Photo + Bio */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-start">
           
           {/* Left: Huge Title with Progressive Word Reveal */}
           <div className="lg:col-span-7 space-y-2">
@@ -46,30 +47,30 @@ export default function AboutImpact() {
                     delay: lineIdx * 0.14,
                     ease: [0.16, 1, 0.3, 1]
                   }}
-                  className={`text-5xl sm:text-7xl xl:text-8xl font-display font-black tracking-[-0.05em] leading-[0.92] ${line.color}`}
+                  className={`text-4xl xs:text-5xl sm:text-7xl xl:text-8xl font-display font-black tracking-[-0.05em] leading-[0.92] ${line.color} break-words`}
                 >
                   {line.text}
                 </motion.div>
               </div>
             ))}
 
-            {/* Rotating Asterisk & Small Tilted Photo */}
-            <div className="flex items-center gap-6 pt-8">
+            {/* Rotating Sparkles & Small Tilted Photo */}
+            <div className="flex flex-wrap items-center gap-4 sm:gap-6 pt-6 sm:pt-8">
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 18, repeat: Infinity, ease: 'linear' }}
-                className="text-4xl sm:text-5xl font-black text-[#10d9a0]"
+                className="shrink-0"
               >
-                ✱
+                <Sparkles className="w-8 h-8 sm:w-11 sm:h-11 text-[#10d9a0]" />
               </motion.div>
-              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border-2 border-black rotate-[-6deg] shadow-lg">
+              <div className="w-14 h-14 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border-2 border-black rotate-[-6deg] shadow-lg shrink-0">
                 <img
                   src="/profile.jpg"
                   alt="Mohamed Amine"
                   className="w-full h-full object-cover object-top"
                 />
               </div>
-              <div className="text-xs font-mono font-bold uppercase tracking-wider text-neutral-500">
+              <div className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-neutral-500">
                 MOHAMED AMINE TELJAOUI<br />
                 <span className="text-black">DÉVELOPPEUR FULL-STACK</span>
               </div>
@@ -77,7 +78,7 @@ export default function AboutImpact() {
           </div>
 
           {/* Right: Small Uppercase Bio Paragraph */}
-          <div className="lg:col-span-5 space-y-6 lg:pt-4">
+          <div className="lg:col-span-5 space-y-4 sm:space-y-6 lg:pt-4">
             <div className="text-[11px] font-mono font-bold tracking-[0.2em] text-neutral-500 uppercase">
               // PROFIL TECHNIQUE & VISION
             </div>
@@ -92,10 +93,10 @@ export default function AboutImpact() {
         </div>
 
         {/* Stats Row: "72+" Style Big Counters */}
-        <div className="pt-16 border-t border-neutral-300 grid grid-cols-1 sm:grid-cols-3 gap-8">
+        <div className="pt-10 sm:pt-16 border-t border-neutral-300 grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-8">
           {personalData.stats.map((s, idx) => (
-            <div key={s.label} className="space-y-1">
-              <div className="text-6xl sm:text-7xl xl:text-8xl font-display font-black tracking-[-0.06em] text-black">
+            <div key={s.label} className="space-y-1 text-center sm:text-left flex flex-col items-center sm:items-start">
+              <div className="text-5xl sm:text-7xl xl:text-8xl font-display font-black tracking-[-0.06em] text-black">
                 {s.number}
               </div>
               <div className="text-xs font-mono font-bold tracking-wider text-[#10d9a0] uppercase">

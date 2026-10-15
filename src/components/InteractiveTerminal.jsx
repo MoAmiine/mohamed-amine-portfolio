@@ -47,13 +47,12 @@ export default function InteractiveTerminal() {
     } else if (trimmed === 'about') {
       newHistory.push({
         type: 'output',
-        content: `Mohamed Amine Teljaoui — Développeur MERN Stack
+        content: `Mohamed Amine Teljaoui — Développeur Full Stack spécialité MERN
 --------------------------------------------------
-Étudiant en 2ème année à YouCode (UM6P) en développement web full-stack,
-spécialisé dans MERN stack (MongoDB, Express, React, Node.js).
-Expérimenté dans la création d'applications web sécurisées,
-d'interfaces utilisateur interactives et de systèmes backend robustes.
-Fort intérêt pour le code propre, la sécurité des applications et la gestion de bases de données.`
+Développeur Web Full-Stack spécialisé MERN (MongoDB, Express, React, Node.js)
+et écosystème Laravel (PHP). Expérimenté dans la conception d'architectures SaaS,
+d'interfaces utilisateur réactives et d'APIs RESTful performantes et sécurisées.
+Fort intérêt pour le code propre, la conteneurisation Docker et l'optimisation des bases de données.`
       });
     } else if (trimmed === 'skills') {
       newHistory.push({
@@ -76,15 +75,15 @@ Fort intérêt pour le code propre, la sécurité des applications et la gestion
       newHistory.push({
         type: 'output',
         content: `Email    : medamine.teljaoui@gmail.com
-Téléphone: +212 601818233
+Téléphone: +212 634-555918
 GitHub   : github.com/MoAmiine
-LinkedIn : linkedin.com/in/mohamed-amine-teljaoui`
+LinkedIn : linkedin.com/in/mohamed-amine-teljaoui-6b3592396`
       });
     } else if (trimmed === 'matrix') {
       newHistory.push({
         type: 'output',
         content: `01001101 01001111 01001000 01000001 01001101 01000101 01000100
-[✓] Welcome to Mohamed Amine's core runtime. Everything is operational.`
+[OK] Welcome to Mohamed Amine's core runtime. Everything is operational.`
       });
     } else if (trimmed === '') {
       // Nothing

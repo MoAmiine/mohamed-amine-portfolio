@@ -27,7 +27,7 @@ export default function PageIntro() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
-              className="text-5xl sm:text-7xl font-display font-black tracking-tight text-white flex items-center gap-2"
+              className="text-3xl xs:text-4xl sm:text-7xl font-display font-black tracking-tight text-white flex items-center justify-center gap-2 flex-wrap text-center px-4"
             >
               <span>MOHAMED</span>
               <span className="text-[#10d9a0]">AMINE</span>

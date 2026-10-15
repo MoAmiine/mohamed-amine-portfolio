@@ -13,9 +13,9 @@ export default function WhyChooseMe() {
     <section
       id="why-me"
       ref={containerRef}
-      className="w-full bg-[#f6f6f4] text-black py-28 px-6 sm:px-12 lg:px-16 border-b border-neutral-300 relative select-none"
+      className="w-full bg-[#f6f6f4] text-black py-16 sm:py-28 px-4 sm:px-12 lg:px-16 border-b border-neutral-300 relative select-none"
     >
-      <div className="max-w-7xl mx-auto space-y-16">
+      <div className="max-w-7xl mx-auto space-y-12 sm:space-y-16">
         
         {/* Pill */}
         <div className="section-pill-light">
@@ -24,7 +24,7 @@ export default function WhyChooseMe() {
         </div>
 
         {/* Huge Blur-to-Sharp Headline */}
-        <h2 className="text-4xl sm:text-6xl xl:text-7xl font-display font-black tracking-[-0.05em] leading-[0.95] flex flex-wrap gap-x-4 gap-y-1 max-w-5xl">
+        <h2 className="text-3xl sm:text-6xl xl:text-7xl font-display font-black tracking-[-0.05em] leading-[0.95] flex flex-wrap gap-x-2 sm:gap-x-4 gap-y-1 max-w-5xl">
           {words.map((w, i) => (
             <motion.span
               key={i}
@@ -43,9 +43,9 @@ export default function WhyChooseMe() {
         </h2>
 
         {/* 4 Value Pillars Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pt-8 border-t border-neutral-300">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 pt-6 sm:pt-8 border-t border-neutral-300">
           {whyChoosePoints.map((point) => (
-            <div key={point.num} className="space-y-3 group">
+            <div key={point.num} className="space-y-2 sm:space-y-3 group">
               <div className="text-xs font-mono font-bold text-[#10d9a0]">
                 {point.num} //
               </div>
