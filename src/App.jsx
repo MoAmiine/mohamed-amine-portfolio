@@ -13,12 +13,14 @@ import WhyChooseMe from './components/WhyChooseMe';
 import CtaFooter from './components/CtaFooter';
 import ProjectModal from './components/ProjectModal';
 import ServiceModal from './components/ServiceModal';
+import CvModal from './components/CvModal';
 import Toast from './components/Toast';
 import BackToTop from './components/BackToTop';
 
 export default function App() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [selectedService, setSelectedService] = useState(null);
+  const [isCvOpen, setIsCvOpen] = useState(false);
   const [toastMessage, setToastMessage] = useState(null);
 
   // Initialize Lenis Smooth Scroll and guarantee scroll to top on reload
@@ -78,7 +80,7 @@ export default function App() {
       <CustomCursor />
 
       {/* Floating Transparent/Glass Navbar with Fullscreen Overlay */}
-      <Navbar />
+      <Navbar onOpenCv={() => setIsCvOpen(true)} />
 
       {/* 1. HERO (Full Screen with Blueprint Grid, Photo, Giant Outline Name) */}
       <Hero />
@@ -102,7 +104,7 @@ export default function App() {
       <WhyChooseMe />
 
       {/* 8. CTA + FOOTER (Near-Black Section with Giant PARLONS-EN) */}
-      <CtaFooter onShowToast={showToast} />
+      <CtaFooter onShowToast={showToast} onOpenCv={() => setIsCvOpen(true)} />
 
       {/* Project Detail Modal */}
       <ProjectModal
@@ -114,6 +116,12 @@ export default function App() {
       <ServiceModal
         service={selectedService}
         onClose={() => setSelectedService(null)}
+      />
+
+      {/* CV Preview & Download Modal */}
+      <CvModal
+        isOpen={isCvOpen}
+        onClose={() => setIsCvOpen(false)}
       />
 
       {/* Interactive Toast Notifications */}

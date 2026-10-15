@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { personalData } from '../data/portfolioData';
-import { ArrowUpRight, Copy, Check, Phone, Mail, ArrowUp } from 'lucide-react';
+import { ArrowUpRight, Copy, Check, Phone, Mail, ArrowUp, FileText } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, InstagramIcon } from './Icons';
 
-export default function CtaFooter({ onShowToast }) {
+export default function CtaFooter({ onShowToast, onOpenCv }) {
   const [copied, setCopied] = useState(false);
 
   const handleCopyEmail = (e) => {
@@ -56,6 +56,17 @@ export default function CtaFooter({ onShowToast }) {
                 {copied ? <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#10d9a0]" /> : <Copy className="w-3.5 h-3.5 sm:w-4 sm:h-4" />}
               </span>
             </a>
+          </div>
+
+          {/* CV Button directly under email */}
+          <div className="pt-2 sm:pt-3">
+            <button
+              onClick={onOpenCv}
+              className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full text-xs font-mono font-bold uppercase tracking-wider bg-white/[0.04] hover:bg-[#10d9a0] text-neutral-300 hover:text-black border border-white/10 hover:border-[#10d9a0] transition-all cursor-pointer group shadow-lg"
+            >
+              <FileText className="w-3.5 h-3.5 text-[#10d9a0] group-hover:text-black transition-colors" />
+              <span>CONSULTER LE CV (PDF)</span>
+            </button>
           </div>
 
           {/* Secondary Details Row */}

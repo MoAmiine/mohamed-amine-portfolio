@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { personalData } from '../data/portfolioData';
-import { ArrowUpRight, X, Phone, Mail, Clock, Plus } from 'lucide-react';
+import { ArrowUpRight, X, Phone, Mail, Clock, Plus, FileText } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, InstagramIcon } from './Icons';
 
-export default function Navbar() {
+export default function Navbar({ onOpenCv }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -81,6 +81,16 @@ export default function Navbar() {
             >
               <LinkedinIcon className="w-4 h-4" />
             </a>
+
+            {/* CV Modal Quick Button */}
+            <button
+              onClick={onOpenCv}
+              className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-white/10 hover:border-[#10d9a0] text-neutral-300 hover:text-[#10d9a0] flex items-center justify-center transition-all bg-white/[0.04] cursor-pointer group"
+              title="Consulter mon CV (PDF)"
+              aria-label="Consulter mon CV"
+            >
+              <FileText className="w-4 h-4 group-hover:scale-110 transition-transform text-[#10d9a0]" />
+            </button>
 
             <a
               href="#contact"
