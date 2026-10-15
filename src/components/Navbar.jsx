@@ -31,33 +31,33 @@ export default function Navbar({ onOpenCv }) {
     <>
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
-          ? 'bg-[#0a0a0a]/85 backdrop-blur-xl border-b border-white/5 py-3.5 sm:py-4 px-4 sm:px-12' 
-          : 'bg-transparent py-4 sm:py-6 px-4 sm:px-12'
+          ? 'bg-[#0a0a0a]/85 backdrop-blur-xl border-b border-white/5 py-3.5 sm:py-4 px-4 sm:px-8 lg:px-12' 
+          : 'bg-transparent py-4 sm:py-6 px-4 sm:px-8 lg:px-12'
       }`}>
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
+        <div className="w-full flex items-center justify-between relative">
           
           {/* Logo Left */}
-          <a href="#" className="flex items-center gap-2 group">
+          <a href="#" className="flex items-center gap-2 group shrink-0">
             <span className="font-display text-lg sm:text-xl font-black text-white tracking-tight">
               MoAmiine<span className="text-[#10d9a0]">.dev</span>
             </span>
           </a>
 
-          {/* Links Center */}
-          <nav className="hidden md:flex items-center gap-8 text-[12px] font-bold tracking-[0.14em] text-neutral-400 uppercase">
+          {/* Links Center (Zone Rouge - strictly centered in the navbar) */}
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-[12px] font-bold tracking-[0.14em] text-neutral-400 uppercase absolute left-1/2 -translate-x-1/2 pointer-events-auto">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="hover:text-[#10d9a0] transition-colors duration-200"
+                className="hover:text-[#10d9a0] transition-colors duration-200 py-1"
               >
                 {link.label}
               </a>
             ))}
           </nav>
 
-          {/* Right Actions: GitHub & LinkedIn Quick Icons + Discuter + Hamburger */}
-          <div className="flex items-center gap-2 sm:gap-3">
+          {/* Right Actions: GitHub & LinkedIn Quick Icons + CV + Discuter + Hamburger (Zone Verte - pulled all the way to the right) */}
+          <div className="flex items-center gap-2 sm:gap-3 ml-auto">
             {/* GitHub Quick Link */}
             <a
               href={personalData.socials.github}
