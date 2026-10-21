@@ -27,6 +27,7 @@ export const personalData = {
 
 export const marqueeTech = [
   { name: "React.js", icon: "react" },
+  { name: "TypeScript", icon: "ts" },
   { name: "Next.js", icon: "next" },
   { name: "Node.js", icon: "node" },
   { name: "Nest.js", icon: "nest" },

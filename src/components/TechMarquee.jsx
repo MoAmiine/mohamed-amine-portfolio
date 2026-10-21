@@ -10,6 +10,7 @@ import {
   PostgresIcon, 
   TailwindIcon, 
   JsIcon, 
+  TsIcon,
   DockerIcon, 
   GitIcon,
   NextIcon,
@@ -18,6 +19,7 @@ import {
 
 const iconMap = {
   react: ReactIcon,
+  ts: TsIcon,
   next: NextIcon,
   node: NodeIcon,
   nest: NestIcon,
