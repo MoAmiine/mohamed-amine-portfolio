@@ -11,12 +11,16 @@ import {
   TailwindIcon, 
   JsIcon, 
   DockerIcon, 
-  GitIcon 
+  GitIcon,
+  NextIcon,
+  NestIcon
 } from './Icons';
 
 const iconMap = {
   react: ReactIcon,
+  next: NextIcon,
   node: NodeIcon,
+  nest: NestIcon,
   mongo: MongoIcon,
   express: ExpressIcon,
   laravel: LaravelIcon,
