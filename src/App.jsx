@@ -71,7 +71,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen w-full max-w-full overflow-x-hidden bg-[#0a0a0a] text-white selection:bg-[#10d9a0] selection:text-black relative">
+    <div className="min-h-screen w-full max-w-full overflow-x-hidden bg-[#000000] text-white selection:bg-[#a3e635] selection:text-black relative">
       
       {/* Page Load Intro Animation */}
       <PageIntro />

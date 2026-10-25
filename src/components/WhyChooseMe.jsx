@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+﻿import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { whyChoosePoints } from '../data/portfolioData';
 
@@ -19,7 +19,7 @@ export default function WhyChooseMe() {
         
         {/* Pill */}
         <div className="section-pill-light">
-          <span className="text-[#10d9a0]">●</span>
+          <span className="text-[#a3e635]">●</span>
           <span>POURQUOI MOI</span>
         </div>
 
@@ -46,10 +46,10 @@ export default function WhyChooseMe() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 pt-6 sm:pt-8 border-t border-neutral-300">
           {whyChoosePoints.map((point) => (
             <div key={point.num} className="space-y-2 sm:space-y-3 group">
-              <div className="text-xs font-mono font-bold text-[#10d9a0]">
+              <div className="text-xs font-mono font-bold text-[#a3e635]">
                 {point.num} //
               </div>
-              <h3 className="text-base sm:text-lg font-display font-black text-black uppercase tracking-tight group-hover:text-[#10d9a0] transition-colors">
+              <h3 className="text-base sm:text-lg font-display font-black text-black uppercase tracking-tight group-hover:text-[#a3e635] transition-colors">
                 {point.title}
               </h3>
               <p className="text-xs text-neutral-600 font-medium leading-relaxed">

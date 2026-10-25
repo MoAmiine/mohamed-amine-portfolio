@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+﻿import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { processSteps } from '../data/portfolioData';
 import { Search, Layers, Code2, Rocket } from 'lucide-react';
@@ -20,7 +20,7 @@ export default function ProcessSection() {
         {/* Section Header */}
         <div className="space-y-4">
           <div className="section-pill-dark">
-            <span className="text-[#10d9a0]">●</span>
+            <span className="text-[#a3e635]">●</span>
             <span>MA MÉTHODE DE TRAVAIL</span>
           </div>
 
@@ -44,7 +44,7 @@ export default function ProcessSection() {
               }}
               whileHover={{
                 y: -8,
-                borderColor: '#10d9a0',
+                borderColor: '#a3e635',
                 boxShadow: '0 20px 40px -15px rgba(16, 217, 160, 0.2)'
               }}
               className="bg-[#111111] border border-white/10 rounded-3xl p-6 sm:p-8 flex flex-col justify-between min-h-[220px] sm:aspect-square group transition-all duration-300 cursor-pointer"
@@ -52,21 +52,21 @@ export default function ProcessSection() {
               {/* Top Row: Rotating Green Icon & Step Number */}
               <div className="flex items-center justify-between">
                 <motion.div
-                  className="w-10 h-10 rounded-2xl bg-white/[0.04] border border-white/10 flex items-center justify-center text-[#10d9a0] group-hover:rotate-90 transition-transform duration-500"
+                  className="w-10 h-10 rounded-2xl bg-white/[0.04] border border-white/10 flex items-center justify-center text-[#a3e635] group-hover:rotate-90 transition-transform duration-500"
                 >
                   {(() => {
                     const StepIcon = processIcons[idx % processIcons.length];
-                    return <StepIcon className="w-5 h-5 text-[#10d9a0]" />;
+                    return <StepIcon className="w-5 h-5 text-[#a3e635]" />;
                   })()}
                 </motion.div>
-                <span className="font-mono text-xs text-neutral-600 group-hover:text-[#10d9a0] transition-colors">
+                <span className="font-mono text-xs text-neutral-600 group-hover:text-[#a3e635] transition-colors">
                   {step.step} //
                 </span>
               </div>
 
               {/* Title & Description at Bottom */}
               <div className="space-y-2 sm:space-y-3 pt-6">
-                <h3 className="text-lg sm:text-xl lg:text-2xl font-display font-black uppercase tracking-tight text-white group-hover:text-[#10d9a0] transition-colors">
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-display font-black uppercase tracking-tight text-white group-hover:text-[#a3e635] transition-colors">
                   {step.title}
                 </h3>
                 <p className="text-xs text-neutral-400 font-normal leading-relaxed">

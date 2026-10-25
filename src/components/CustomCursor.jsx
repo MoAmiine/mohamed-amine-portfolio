@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 export default function CustomCursor() {
@@ -37,7 +37,7 @@ export default function CustomCursor() {
       y: mousePosition.y - 5,
       width: 10,
       height: 10,
-      backgroundColor: '#10d9a0',
+      backgroundColor: '#a3e635',
       transition: { type: 'spring', damping: 28, stiffness: 400, mass: 0.1 }
     },
     hover: {
@@ -46,7 +46,7 @@ export default function CustomCursor() {
       width: 40,
       height: 40,
       backgroundColor: 'rgba(16, 217, 160, 0.25)',
-      border: '1.5px solid #10d9a0',
+      border: '1.5px solid #a3e635',
       transition: { type: 'spring', damping: 25, stiffness: 350, mass: 0.1 }
     },
     voir: {
@@ -54,7 +54,7 @@ export default function CustomCursor() {
       y: mousePosition.y - 35,
       width: 70,
       height: 70,
-      backgroundColor: '#10d9a0',
+      backgroundColor: '#a3e635',
       transition: { type: 'spring', damping: 25, stiffness: 350, mass: 0.1 }
     }
   };

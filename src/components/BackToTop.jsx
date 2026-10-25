@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUp } from 'lucide-react';
 
@@ -42,7 +42,7 @@ export default function BackToTop() {
           onClick={scrollToTop}
           aria-label="Retour en haut de page"
           title="Retour en haut"
-          className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-40 w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-[#111111]/90 backdrop-blur-md border border-white/20 hover:border-[#10d9a0] text-neutral-300 hover:text-black hover:bg-[#10d9a0] flex items-center justify-center shadow-2xl hover:shadow-[0_0_25px_rgba(16,217,160,0.4)] transition-colors duration-300 cursor-pointer group"
+          className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-40 w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-[#111111]/90 backdrop-blur-md border border-white/20 hover:border-[#a3e635] text-neutral-300 hover:text-black hover:bg-[#a3e635] flex items-center justify-center shadow-2xl hover:shadow-[0_0_25px_rgba(16,217,160,0.4)] transition-colors duration-300 cursor-pointer group"
         >
           <ArrowUp className="w-5 h-5 transition-transform duration-300 group-hover:-translate-y-0.5" />
           <span className="sr-only">Haut de page</span>

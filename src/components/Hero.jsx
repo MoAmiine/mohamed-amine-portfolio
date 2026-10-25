@@ -25,10 +25,23 @@ export default function Hero() {
   return (
     <section
       onMouseMove={handleMouseMove}
-      className="relative min-h-screen w-full bg-[#0a0a0a] text-white overflow-hidden flex flex-col justify-between pt-20 sm:pt-24 pb-8 sm:pb-12 px-4 sm:px-8 lg:px-12 select-none"
+      className="relative min-h-screen w-full bg-[#000000] text-white overflow-hidden flex flex-col justify-between pt-20 sm:pt-24 pb-8 sm:pb-12 px-4 sm:px-8 lg:px-12 select-none"
     >
       {/* Blueprint Grid Lines & Plus Markers */}
-      <div className="absolute inset-0 blueprint-grid pointer-events-none opacity-60"></div>
+      <div className="absolute inset-0 blueprint-grid pointer-events-none opacity-45"></div>
+
+      {/* Bespoke 3D Monolith Atmosphere Art (Higgsfield) */}
+      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden select-none">
+        <img
+          src="/images/hero-monolith-ambient.png"
+          alt=""
+          className="w-full h-full object-cover object-center opacity-35 mix-blend-screen filter contrast-125 saturate-125"
+          style={{
+            maskImage: 'radial-gradient(ellipse 85% 75% at 70% 45%, black 35%, transparent 100%)',
+            WebkitMaskImage: 'radial-gradient(ellipse 85% 75% at 70% 45%, black 35%, transparent 100%)'
+          }}
+        />
+      </div>
       
       {/* Decorative Plus Markers */}
       <div className="absolute top-24 sm:top-28 left-4 sm:left-12 text-white/20 font-mono text-xs sm:text-sm pointer-events-none">+</div>
@@ -47,7 +60,7 @@ export default function Hero() {
       {/* Top Left Tagline under Navbar */}
       <div className="relative z-20 max-w-xs sm:max-w-sm mt-2 sm:mt-4">
         <div className="section-pill-dark mb-3 sm:mb-4 text-[10px] sm:text-xs">
-          <span className="text-[#10d9a0]">●</span>
+          <span className="text-[#a3e635]">●</span>
           <span>DÉVELOPPEUR FULL-STACK</span>
         </div>
         <p className="text-[11px] sm:text-[13px] font-bold text-neutral-300 uppercase tracking-widest leading-relaxed">
@@ -76,14 +89,14 @@ export default function Hero() {
         
         {/* Bottom Left Giant Solid Full Name */}
         <div className="max-w-4xl w-full">
-          <div className="text-[11px] sm:text-sm font-mono font-bold tracking-[0.16em] sm:tracking-[0.2em] text-[#10d9a0] mb-2 sm:mb-3 flex items-center gap-2">
+          <div className="text-[11px] sm:text-sm font-mono font-bold tracking-[0.16em] sm:tracking-[0.2em] text-[#a3e635] mb-2 sm:mb-3 flex items-center gap-2">
             <span>{personalData.year}</span>
             <span className="text-white/40">•</span>
             <span>YOUCODE UM6P</span>
           </div>
           <h1 className="text-4xl xs:text-5xl sm:text-7xl md:text-8xl lg:text-[7.2vw] font-display font-black tracking-[-0.05em] text-white leading-[0.9] uppercase break-words">
             MOHAMED AMINE<br />
-            <span className="text-neutral-400">TELJAOUI</span><span className="text-[#10d9a0]">.</span>
+            <span className="text-neutral-400">TELJAOUI</span><span className="text-[#a3e635]">.</span>
           </h1>
         </div>
 
@@ -93,12 +106,12 @@ export default function Hero() {
           className="glass-surface p-3.5 sm:p-5 rounded-2xl border border-white/10 max-w-sm w-full sm:w-auto flex items-center justify-between gap-3 sm:gap-5 shadow-2xl backdrop-blur-xl"
         >
           <div className="flex items-center gap-3">
-            <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-full overflow-hidden border-2 border-[#10d9a0] shrink-0">
+            <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-full overflow-hidden border-2 border-[#a3e635] shrink-0">
               <img src="/profile.jpg" alt="Avatar" className="w-full h-full object-cover object-top" />
-              <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-[#10d9a0] rounded-full border-2 border-[#0a0a0a]"></span>
+              <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-[#a3e635] rounded-full border-2 border-[#0a0a0a]"></span>
             </div>
             <div>
-              <div className="text-[10px] sm:text-[11px] font-mono font-bold text-[#10d9a0] uppercase tracking-wider">
+              <div className="text-[10px] sm:text-[11px] font-mono font-bold text-[#a3e635] uppercase tracking-wider">
                 LET'S TALK
               </div>
               <div className="text-xs sm:text-sm font-bold text-white font-display">
@@ -112,7 +125,7 @@ export default function Hero() {
 
           <a
             href="#contact"
-            className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#10d9a0] hover:bg-[#0fd098] text-black flex items-center justify-center font-bold transition-transform hover:scale-105 shrink-0"
+            className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#a3e635] hover:bg-[#84cc16] text-black flex items-center justify-center font-bold transition-transform hover:scale-105 shrink-0"
             title="Ouvrir le contact"
           >
             <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5" />

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { skillCategories, languages } from '../data/portfolioData';
 import { Cpu, ShieldCheck, Terminal, Globe2, Sparkles, Check } from 'lucide-react';
 import { playClick } from '../utils/audio';

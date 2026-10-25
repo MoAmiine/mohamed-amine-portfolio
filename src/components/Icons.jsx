@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 export function GithubIcon({ className = "w-4 h-4" }) {
   return (
@@ -154,6 +154,17 @@ export function NestIcon({ className = "w-4 h-4" }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="currentColor">
       <path d="M19.5 9.5c-.3-2.1-1.7-3.8-3.7-4.4.1.6.1 1.2-.1 1.8-.3.9-.9 1.7-1.7 2.1-.8.4-1.7.5-2.6.3s-1.7-.7-2.3-1.4c-.6-.7-.9-1.6-.9-2.5 0-.9.3-1.8.9-2.5.6-.7 1.4-1.2 2.3-1.4.9-.2 1.8-.1 2.6.3.3.2.6.4.9.6.6-.3 1.3-.5 2-.6 1.8-.2 3.6.3 5 1.4 1.4 1.1 2.3 2.7 2.5 4.5.2 1.8-.3 3.6-1.4 5s-2.7 2.3-4.5 2.5c-.9.1-1.8 0-2.7-.3l.5-1.7c.7.2 1.4.3 2.1.2 1.4-.2 2.6-.9 3.4-2s1.1-2.5.9-3.9zM5.5 13.5c.7 1.3 1.9 2.2 3.3 2.6 1.4.4 2.9.2 4.1-.5l.9 1.5c-1.5.9-3.3 1.2-5 .7-1.7-.5-3.1-1.6-4-3.1s-1.1-3.3-.6-5l1.7.5c-.4 1.3-.3 2.7.4 3.8z"/>
+    </svg>
+  );
+}
+
+export function MonolithLogo({ className = "w-7 h-7" }) {
+  return (
+    <svg className={className} viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="100" height="100" rx="22" fill="#000000" stroke="rgba(255,255,255,0.14)" strokeWidth="2.5"/>
+      <path d="M22 26H78V38H56V74H44V38H22V26Z" fill="#FFFFFF"/>
+      <path d="M26 44L38 60L50 44V74H40V62L34 70L28 62V74H26V44Z" fill="#a3e635"/>
+      <circle cx="50" cy="50" r="38" stroke="#a3e635" strokeWidth="1.5" strokeOpacity="0.35" strokeDasharray="4 4"/>
     </svg>
   );
 }

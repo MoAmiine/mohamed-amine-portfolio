@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function PageIntro() {
@@ -30,14 +30,14 @@ export default function PageIntro() {
               className="text-3xl xs:text-4xl sm:text-7xl font-display font-black tracking-tight text-white flex items-center justify-center gap-2 flex-wrap text-center px-4"
             >
               <span>MOHAMED</span>
-              <span className="text-[#10d9a0]">AMINE</span>
+              <span className="text-[#a3e635]">AMINE</span>
             </motion.div>
             
             <motion.div
               initial={{ width: 0 }}
               animate={{ width: 140 }}
               transition={{ duration: 0.7, delay: 0.3, ease: 'easeInOut' }}
-              className="h-1 bg-[#10d9a0] mt-4 rounded-full"
+              className="h-1 bg-[#a3e635] mt-4 rounded-full"
             />
 
             <motion.div
