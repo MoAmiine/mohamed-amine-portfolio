@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { marqueeTech } from '../data/portfolioData';
 import { 
   ReactIcon, 
@@ -42,7 +42,7 @@ export default function TechMarquee() {
       
       {/* Pinned Label Left */}
       <div className="hidden sm:flex items-center gap-2 pl-8 pr-6 py-1 bg-[#f6f6f4] border-r border-neutral-300 z-10 shrink-0">
-        <span className="w-2 h-2 rounded-full bg-[#a3e635]"></span>
+        <span className="w-2 h-2 rounded-full bg-[#10d9a0]"></span>
         <span className="text-[11px] font-mono font-bold tracking-[0.2em] uppercase text-neutral-800">
           STACK UTILISÉE
         </span>
@@ -58,7 +58,7 @@ export default function TechMarquee() {
                 key={idx}
                 className="flex items-center gap-2.5 text-neutral-600 hover:text-black hover:scale-105 transition-all duration-200 cursor-pointer group"
               >
-                <span className="w-5 h-5 flex items-center justify-center text-neutral-500 group-hover:text-[#a3e635] transition-colors shrink-0">
+                <span className="w-5 h-5 flex items-center justify-center text-neutral-500 group-hover:text-[#10d9a0] transition-colors shrink-0">
                   {IconComponent ? <IconComponent className="w-4 h-4" /> : null}
                 </span>
                 <span className="text-xs sm:text-sm font-display font-black tracking-tight uppercase">

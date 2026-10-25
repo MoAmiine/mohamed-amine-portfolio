@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { CheckCircle2, Sparkles } from 'lucide-react';
 
 export default function Toast({ message }) {

@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { ArrowUp, Heart } from 'lucide-react';
 import { playClick } from '../utils/audio';
 

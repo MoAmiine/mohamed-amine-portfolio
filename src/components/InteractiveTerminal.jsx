@@ -1,4 +1,4 @@
-﻿import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Terminal as TerminalIcon, Sparkles } from 'lucide-react';
 import { playClick } from '../utils/audio';
 

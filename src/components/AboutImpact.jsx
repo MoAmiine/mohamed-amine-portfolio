@@ -1,4 +1,4 @@
-﻿import React, { useRef } from 'react';
+import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { personalData } from '../data/portfolioData';
 import { Sparkles } from 'lucide-react';
@@ -24,7 +24,7 @@ export default function AboutImpact() {
         {/* Top Section Pill */}
         <div className="flex items-center justify-between">
           <div className="section-pill-light">
-            <span className="text-[#a3e635]">●</span>
+            <span className="text-[#10d9a0]">●</span>
             <span>DES PARCOURS NUMÉRIQUES MEILLEURS</span>
           </div>
           <div className="hidden sm:block text-[11px] font-mono text-neutral-500 uppercase tracking-widest">
@@ -61,7 +61,7 @@ export default function AboutImpact() {
                 transition={{ duration: 18, repeat: Infinity, ease: 'linear' }}
                 className="shrink-0"
               >
-                <Sparkles className="w-8 h-8 sm:w-11 sm:h-11 text-[#a3e635]" />
+                <Sparkles className="w-8 h-8 sm:w-11 sm:h-11 text-[#10d9a0]" />
               </motion.div>
               <div className="w-14 h-14 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border-2 border-black rotate-[-6deg] shadow-lg shrink-0">
                 <img
@@ -82,7 +82,7 @@ export default function AboutImpact() {
             <div className="text-[11px] font-mono font-bold tracking-[0.2em] text-neutral-500 uppercase">
               // PROFIL TECHNIQUE & VISION
             </div>
-            <p className="text-xs sm:text-[13px] font-bold text-neutral-800 leading-relaxed uppercase tracking-wider text-justify border-l-2 border-[#a3e635] pl-4">
+            <p className="text-xs sm:text-[13px] font-bold text-neutral-800 leading-relaxed uppercase tracking-wider text-justify border-l-2 border-[#10d9a0] pl-4">
               {personalData.bio}
             </p>
             <div className="text-xs text-neutral-600 font-medium leading-relaxed">
@@ -99,7 +99,7 @@ export default function AboutImpact() {
               <div className="text-5xl sm:text-7xl xl:text-8xl font-display font-black tracking-[-0.06em] text-black">
                 {s.number}
               </div>
-              <div className="text-xs font-mono font-bold tracking-wider text-[#a3e635] uppercase">
+              <div className="text-xs font-mono font-bold tracking-wider text-[#10d9a0] uppercase">
                 {s.label}
               </div>
               <div className="text-[11px] text-neutral-500 font-mono uppercase">

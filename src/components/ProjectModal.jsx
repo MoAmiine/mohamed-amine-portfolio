@@ -1,4 +1,4 @@
-﻿import React, { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ExternalLink, Layers } from 'lucide-react';
 
@@ -49,7 +49,7 @@ export default function ProjectModal({ project, onClose }) {
 
           {/* Top Metadata */}
           <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-3 sm:mb-4 pr-10">
-            <span className="px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full text-[10px] font-mono font-bold bg-[#a3e635]/15 text-[#a3e635] border border-[#a3e635]/30 uppercase">
+            <span className="px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full text-[10px] font-mono font-bold bg-[#10d9a0]/15 text-[#10d9a0] border border-[#10d9a0]/30 uppercase">
               {project.badge}
             </span>
             <span className="text-[11px] sm:text-xs font-mono text-neutral-500 uppercase">
@@ -80,7 +80,7 @@ export default function ProjectModal({ project, onClose }) {
 
           {/* Highlights / Architecture */}
           <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
-            <div className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-[#a3e635] flex items-center gap-2">
+            <div className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-[#10d9a0] flex items-center gap-2">
               <Layers className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               <span>SPÉCIFICATIONS TECHNIQUES & ARCHITECTURE</span>
             </div>
@@ -113,7 +113,7 @@ export default function ProjectModal({ project, onClose }) {
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-5 sm:px-6 py-3 rounded-xl text-xs font-display font-black uppercase tracking-wider bg-[#a3e635] text-black hover:bg-[#84cc16] transition-colors shadow-lg"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-5 sm:px-6 py-3 rounded-xl text-xs font-display font-black uppercase tracking-wider bg-[#10d9a0] text-black hover:bg-[#0fd098] transition-colors shadow-lg"
             >
               <span>VOIR LE CODE SOURCE GITHUB</span>
               <ExternalLink className="w-4 h-4" />

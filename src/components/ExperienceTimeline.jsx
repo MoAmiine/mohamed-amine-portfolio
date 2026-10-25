@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { experienceTimeline } from '../data/portfolioData';
 import { Briefcase, GraduationCap, TrendingUp, Calendar, MapPin } from 'lucide-react';
 

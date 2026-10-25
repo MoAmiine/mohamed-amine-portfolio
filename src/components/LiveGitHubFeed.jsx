@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Star, GitFork, ExternalLink, Calendar, Code } from 'lucide-react';
 import { GithubIcon } from './Icons';
 import { playClick } from '../utils/audio';

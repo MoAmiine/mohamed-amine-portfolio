@@ -20,7 +20,7 @@ export default function ProjectsSection({ onSelectProject }) {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
           <div className="space-y-3">
             <div className="section-pill-light">
-              <span className="text-[#a3e635]">●</span>
+              <span className="text-[#10d9a0]">●</span>
               <span>PORTFOLIO SÉLECTIONNÉ</span>
             </div>
 
@@ -40,13 +40,13 @@ export default function ProjectsSection({ onSelectProject }) {
             className="group relative inline-flex items-center justify-between sm:justify-start gap-3.5 px-5 sm:px-7 py-3 sm:py-4 rounded-full bg-[#0a0a0a] text-white border border-black/10 shadow-[0_15px_30px_-10px_rgba(0,0,0,0.3)] hover:shadow-[0_20px_40px_-12px_rgba(16,217,160,0.35)] transition-all duration-300 overflow-hidden cursor-pointer w-full sm:w-fit"
           >
             {/* Shimmer light sweep */}
-            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-[#a3e635]/15 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none" />
+            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-[#10d9a0]/15 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none" />
 
             {/* Pulsing indicator + GitHub icon */}
             <span className="flex items-center gap-2">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#a3e635] opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#a3e635]"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#10d9a0] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#10d9a0]"></span>
               </span>
               <GithubIcon className="w-4 h-4 text-neutral-400 group-hover:text-white transition-colors" />
             </span>
@@ -62,7 +62,7 @@ export default function ProjectsSection({ onSelectProject }) {
             </span>
 
             {/* Arrow Bubble */}
-            <span className="w-8 h-8 rounded-full bg-[#a3e635] text-black flex items-center justify-center transition-all duration-300 group-hover:bg-white group-hover:rotate-45 shadow-sm shrink-0">
+            <span className="w-8 h-8 rounded-full bg-[#10d9a0] text-black flex items-center justify-center transition-all duration-300 group-hover:bg-white group-hover:rotate-45 shadow-sm shrink-0">
               <ArrowUpRight className="w-4 h-4 text-black transition-transform" />
             </span>
           </motion.a>
@@ -80,37 +80,20 @@ export default function ProjectsSection({ onSelectProject }) {
             onClick={() => onSelectProject(projectsList[0])}
             className="md:col-span-7 polaroid-frame cursor-pointer group"
           >
-            <div className="relative aspect-[16/10] bg-[#050505] rounded-xl overflow-hidden mb-3 sm:mb-4 border border-black/10 group-hover:border-[#a3e635]/40 transition-all duration-500 shadow-inner flex flex-col">
-              {/* Studio Mockup Header Bar */}
-              <div className="w-full bg-[#121212] border-b border-white/5 px-3 py-1.5 flex items-center justify-between z-10 shrink-0">
-                <div className="flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-white/20"></span>
-                  <span className="w-2 h-2 rounded-full bg-white/20"></span>
-                  <span className="w-2 h-2 rounded-full bg-white/20"></span>
-                </div>
-                <div className="text-[9px] font-mono text-neutral-400 bg-white/[0.04] px-2 py-0.5 rounded border border-white/5 truncate max-w-[140px]">
-                  revio.mo-amiine.dev
-                </div>
-                <div className="w-2"></div>
-              </div>
-
-              {/* Image & Glow Container */}
-              <div className="relative flex-1 p-3 sm:p-5 flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#0e0e0e] to-[#040404]">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(163,230,53,0.08),transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <img
-                  src={projectsList[0].image}
-                  alt="REVIO"
-                  className="max-h-full max-w-full object-contain filter contrast-[1.05] group-hover:scale-[1.03] transition-transform duration-700 ease-out z-10 drop-shadow-[0_15px_25px_rgba(0,0,0,0.6)]"
-                />
-                <div className="absolute top-3 left-3 px-2.5 sm:px-3 py-1 rounded bg-black/85 backdrop-blur-md text-[10px] font-mono font-bold text-[#a3e635] uppercase border border-white/10 z-20">
-                  {projectsList[0].badge}
-                </div>
+            <div className="relative aspect-[16/10] bg-[#0a0a0a] rounded-lg overflow-hidden mb-3 sm:mb-4 p-4 sm:p-6 flex items-center justify-center">
+              <img
+                src={projectsList[0].image}
+                alt="REVIO"
+                className="max-h-full max-w-full object-contain filter contrast-105 group-hover:scale-105 transition-transform duration-700 ease-out"
+              />
+              <div className="absolute top-3 left-3 px-2.5 sm:px-3 py-1 rounded bg-black/80 backdrop-blur-md text-[10px] font-mono font-bold text-[#10d9a0] uppercase border border-white/10">
+                {projectsList[0].badge}
               </div>
             </div>
             
             <div className="flex flex-wrap items-center justify-between gap-2 text-black font-display pt-2 border-t border-neutral-200">
               <div className="flex items-center gap-2 flex-wrap">
-                <span className="text-xs sm:text-sm font-black tracking-tight group-hover:text-[#a3e635] transition-colors">
+                <span className="text-xs sm:text-sm font-black tracking-tight group-hover:text-[#10d9a0] transition-colors">
                   • {projectsList[0].title}
                 </span>
                 <span className="text-[11px] sm:text-xs text-neutral-500 font-mono">
@@ -132,37 +115,20 @@ export default function ProjectsSection({ onSelectProject }) {
             onClick={() => onSelectProject(projectsList[1])}
             className="md:col-span-5 polaroid-frame md:mt-16 cursor-pointer group"
           >
-            <div className="relative aspect-[4/3] bg-[#050505] rounded-xl overflow-hidden mb-3 sm:mb-4 border border-black/10 group-hover:border-[#a3e635]/40 transition-all duration-500 shadow-inner flex flex-col">
-              {/* Studio Mockup Header Bar */}
-              <div className="w-full bg-[#121212] border-b border-white/5 px-3 py-1.5 flex items-center justify-between z-10 shrink-0">
-                <div className="flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-white/20"></span>
-                  <span className="w-2 h-2 rounded-full bg-white/20"></span>
-                  <span className="w-2 h-2 rounded-full bg-white/20"></span>
-                </div>
-                <div className="text-[9px] font-mono text-neutral-400 bg-white/[0.04] px-2 py-0.5 rounded border border-white/5 truncate max-w-[140px]">
-                  munisport.mo-amiine.dev
-                </div>
-                <div className="w-2"></div>
-              </div>
-
-              {/* Image & Glow Container */}
-              <div className="relative flex-1 p-3 sm:p-5 flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#0e0e0e] to-[#040404]">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(163,230,53,0.08),transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <img
-                  src={projectsList[1].image}
-                  alt="MUNISPORT"
-                  className="max-h-full max-w-full object-contain filter contrast-[1.05] group-hover:scale-[1.03] transition-transform duration-700 ease-out z-10 drop-shadow-[0_15px_25px_rgba(0,0,0,0.6)]"
-                />
-                <div className="absolute top-3 left-3 px-2.5 sm:px-3 py-1 rounded bg-black/85 backdrop-blur-md text-[10px] font-mono font-bold text-[#a3e635] uppercase border border-white/10 z-20">
-                  {projectsList[1].badge}
-                </div>
+            <div className="relative aspect-[4/3] bg-[#0a0a0a] rounded-lg overflow-hidden mb-3 sm:mb-4 p-4 sm:p-6 flex items-center justify-center">
+              <img
+                src={projectsList[1].image}
+                alt="MUNISPORT"
+                className="max-h-full max-w-full object-contain filter contrast-105 group-hover:scale-105 transition-transform duration-700 ease-out"
+              />
+              <div className="absolute top-3 left-3 px-2.5 sm:px-3 py-1 rounded bg-black/80 backdrop-blur-md text-[10px] font-mono font-bold text-[#10d9a0] uppercase border border-white/10">
+                {projectsList[1].badge}
               </div>
             </div>
 
             <div className="flex flex-wrap items-center justify-between gap-2 text-black font-display pt-2 border-t border-neutral-200">
               <div className="flex items-center gap-2 flex-wrap">
-                <span className="text-xs sm:text-sm font-black tracking-tight group-hover:text-[#a3e635] transition-colors">
+                <span className="text-xs sm:text-sm font-black tracking-tight group-hover:text-[#10d9a0] transition-colors">
                   • {projectsList[1].title}
                 </span>
                 <span className="text-[11px] sm:text-xs text-neutral-500 font-mono">
@@ -184,37 +150,20 @@ export default function ProjectsSection({ onSelectProject }) {
             onClick={() => onSelectProject(projectsList[2])}
             className="md:col-span-5 polaroid-frame cursor-pointer group"
           >
-            <div className="relative aspect-[4/3] bg-[#050505] rounded-xl overflow-hidden mb-3 sm:mb-4 border border-black/10 group-hover:border-[#a3e635]/40 transition-all duration-500 shadow-inner flex flex-col">
-              {/* Studio Mockup Header Bar */}
-              <div className="w-full bg-[#121212] border-b border-white/5 px-3 py-1.5 flex items-center justify-between z-10 shrink-0">
-                <div className="flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-white/20"></span>
-                  <span className="w-2 h-2 rounded-full bg-white/20"></span>
-                  <span className="w-2 h-2 rounded-full bg-white/20"></span>
-                </div>
-                <div className="text-[9px] font-mono text-neutral-400 bg-white/[0.04] px-2 py-0.5 rounded border border-white/5 truncate max-w-[140px]">
-                  amateur2pro.mo-amiine.dev
-                </div>
-                <div className="w-2"></div>
-              </div>
-
-              {/* Image & Glow Container */}
-              <div className="relative flex-1 p-3 sm:p-5 flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#0e0e0e] to-[#040404]">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(163,230,53,0.08),transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <img
-                  src={projectsList[2].image}
-                  alt="AMATEUR2PRO"
-                  className="max-h-full max-w-full object-contain filter contrast-[1.05] group-hover:scale-[1.03] transition-transform duration-700 ease-out z-10 drop-shadow-[0_15px_25px_rgba(0,0,0,0.6)]"
-                />
-                <div className="absolute top-3 left-3 px-2.5 sm:px-3 py-1 rounded bg-black/85 backdrop-blur-md text-[10px] font-mono font-bold text-[#a3e635] uppercase border border-white/10 z-20">
-                  {projectsList[2].badge}
-                </div>
+            <div className="relative aspect-[4/3] bg-[#0a0a0a] rounded-lg overflow-hidden mb-3 sm:mb-4 p-4 sm:p-6 flex items-center justify-center">
+              <img
+                src={projectsList[2].image}
+                alt="AMATEUR2PRO"
+                className="max-h-full max-w-full object-contain filter contrast-105 group-hover:scale-105 transition-transform duration-700 ease-out"
+              />
+              <div className="absolute top-3 left-3 px-2.5 sm:px-3 py-1 rounded bg-black/80 backdrop-blur-md text-[10px] font-mono font-bold text-[#10d9a0] uppercase border border-white/10">
+                {projectsList[2].badge}
               </div>
             </div>
 
             <div className="flex flex-wrap items-center justify-between gap-2 text-black font-display pt-2 border-t border-neutral-200">
               <div className="flex items-center gap-2 flex-wrap">
-                <span className="text-xs sm:text-sm font-black tracking-tight group-hover:text-[#a3e635] transition-colors">
+                <span className="text-xs sm:text-sm font-black tracking-tight group-hover:text-[#10d9a0] transition-colors">
                   • {projectsList[2].title}
                 </span>
                 <span className="text-[11px] sm:text-xs text-neutral-500 font-mono">
@@ -236,37 +185,20 @@ export default function ProjectsSection({ onSelectProject }) {
             onClick={() => onSelectProject(projectsList[3])}
             className="md:col-span-7 polaroid-frame md:-mt-8 cursor-pointer group"
           >
-            <div className="relative aspect-[16/10] bg-[#050505] rounded-xl overflow-hidden mb-3 sm:mb-4 border border-black/10 group-hover:border-[#a3e635]/40 transition-all duration-500 shadow-inner flex flex-col">
-              {/* Studio Mockup Header Bar */}
-              <div className="w-full bg-[#121212] border-b border-white/5 px-3 py-1.5 flex items-center justify-between z-10 shrink-0">
-                <div className="flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-white/20"></span>
-                  <span className="w-2 h-2 rounded-full bg-white/20"></span>
-                  <span className="w-2 h-2 rounded-full bg-white/20"></span>
-                </div>
-                <div className="text-[9px] font-mono text-neutral-400 bg-white/[0.04] px-2 py-0.5 rounded border border-white/5 truncate max-w-[140px]">
-                  truckflow.mo-amiine.dev
-                </div>
-                <div className="w-2"></div>
-              </div>
-
-              {/* Image & Glow Container */}
-              <div className="relative flex-1 p-3 sm:p-5 flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#0e0e0e] to-[#040404]">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(163,230,53,0.08),transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <img
-                  src={projectsList[3].image}
-                  alt="TRUCKFLOW"
-                  className="max-h-full max-w-full object-contain filter contrast-[1.05] group-hover:scale-[1.03] transition-transform duration-700 ease-out z-10 drop-shadow-[0_15px_25px_rgba(0,0,0,0.6)]"
-                />
-                <div className="absolute top-3 left-3 px-2.5 sm:px-3 py-1 rounded bg-black/85 backdrop-blur-md text-[10px] font-mono font-bold text-[#a3e635] uppercase border border-white/10 z-20">
-                  {projectsList[3].badge}
-                </div>
+            <div className="relative aspect-[16/10] bg-[#0a0a0a] rounded-lg overflow-hidden mb-3 sm:mb-4 p-4 sm:p-6 flex items-center justify-center">
+              <img
+                src={projectsList[3].image}
+                alt="TRUCKFLOW"
+                className="max-h-full max-w-full object-contain filter contrast-105 group-hover:scale-105 transition-transform duration-700 ease-out"
+              />
+              <div className="absolute top-3 left-3 px-2.5 sm:px-3 py-1 rounded bg-black/80 backdrop-blur-md text-[10px] font-mono font-bold text-[#10d9a0] uppercase border border-white/10">
+                {projectsList[3].badge}
               </div>
             </div>
 
             <div className="flex flex-wrap items-center justify-between gap-2 text-black font-display pt-2 border-t border-neutral-200">
               <div className="flex items-center gap-2 flex-wrap">
-                <span className="text-xs sm:text-sm font-black tracking-tight group-hover:text-[#a3e635] transition-colors">
+                <span className="text-xs sm:text-sm font-black tracking-tight group-hover:text-[#10d9a0] transition-colors">
                   • {projectsList[3].title}
                 </span>
                 <span className="text-[11px] sm:text-xs text-neutral-500 font-mono">

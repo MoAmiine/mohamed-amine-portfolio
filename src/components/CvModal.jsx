@@ -1,4 +1,4 @@
-﻿import React, { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Download, ExternalLink, FileText } from 'lucide-react';
 
@@ -50,7 +50,7 @@ export default function CvModal({ isOpen, onClose }) {
           {/* Header */}
           <div className="mb-4 sm:mb-6 pr-10">
             <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-2">
-              <span className="px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full text-[10px] font-mono font-bold bg-[#a3e635]/15 text-[#a3e635] border border-[#a3e635]/30 uppercase flex items-center gap-1.5">
+              <span className="px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full text-[10px] font-mono font-bold bg-[#10d9a0]/15 text-[#10d9a0] border border-[#10d9a0]/30 uppercase flex items-center gap-1.5">
                 <FileText className="w-3.5 h-3.5" />
                 <span>CURRICULUM VITAE // 2026</span>
               </span>
@@ -62,7 +62,7 @@ export default function CvModal({ isOpen, onClose }) {
             <h3 className="text-2xl sm:text-3xl font-display font-black tracking-tight text-white uppercase">
               MOHAMED AMINE TELJAOUI
             </h3>
-            <p className="text-xs sm:text-sm font-mono text-[#a3e635] uppercase tracking-wider mt-1">
+            <p className="text-xs sm:text-sm font-mono text-[#10d9a0] uppercase tracking-wider mt-1">
               DÉVELOPPEUR FULL-STACK MERN & LARAVEL
             </p>
           </div>
@@ -82,7 +82,7 @@ export default function CvModal({ isOpen, onClose }) {
               <a
                 href="/cv-mohamed-amine-teljaoui.pdf"
                 download="CV_Mohamed_Amine_Teljaoui.pdf"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-xs font-display font-black uppercase tracking-wider bg-[#a3e635] text-black hover:bg-[#84cc16] transition-colors shadow-lg cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-xs font-display font-black uppercase tracking-wider bg-[#10d9a0] text-black hover:bg-[#0fd098] transition-colors shadow-lg cursor-pointer"
               >
                 <Download className="w-4 h-4" />
                 <span>TÉLÉCHARGER LE CV</span>

@@ -1,7 +1,7 @@
-﻿@import "tailwindcss";
+@import "tailwindcss";
 
 :root {
-  --color-accent: #a3e635;
+  --color-accent: #10d9a0;
   --bg-dark: #0a0a0a;
   --bg-light: #f6f6f4;
 }
@@ -66,7 +66,7 @@ body {
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #a3e635;
+  background: #10d9a0;
 }
 
 /* Custom Modal Scrollbar */
@@ -86,7 +86,7 @@ body {
   border-radius: 9999px;
 }
 .modal-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #a3e635;
+  background: #10d9a0;
 }
 
 /* Section Pill Badge */

@@ -1,4 +1,4 @@
-﻿import React, { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, CheckCircle2, ArrowUpRight, Cpu, Layers, Sparkles } from 'lucide-react';
 import { 
@@ -90,7 +90,7 @@ export default function ServiceModal({ service, onClose }) {
 
           {/* Top Metadata */}
           <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-3 sm:mb-4 pr-10">
-            <span className="px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full text-[10px] font-mono font-bold bg-[#a3e635]/15 text-[#a3e635] border border-[#a3e635]/30 uppercase">
+            <span className="px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full text-[10px] font-mono font-bold bg-[#10d9a0]/15 text-[#10d9a0] border border-[#10d9a0]/30 uppercase">
               {service.num} // EXPERTISE TECHNIQUE
             </span>
             <span className="text-[11px] sm:text-xs font-mono text-neutral-400">
@@ -102,7 +102,7 @@ export default function ServiceModal({ service, onClose }) {
           <h3 className="text-2xl sm:text-4xl md:text-5xl font-display font-black tracking-tight text-white mb-2 uppercase break-words">
             {service.title}
           </h3>
-          <p className="text-xs sm:text-sm font-mono text-[#a3e635] uppercase tracking-wider mb-5">
+          <p className="text-xs sm:text-sm font-mono text-[#10d9a0] uppercase tracking-wider mb-5">
             {service.subtitle}
           </p>
 
@@ -121,7 +121,7 @@ export default function ServiceModal({ service, onClose }) {
           {/* Detailed Presentation */}
           <div className="space-y-3 mb-6 sm:mb-8">
             <div className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-neutral-400 flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-[#a3e635]" />
+              <Sparkles className="w-4 h-4 text-[#10d9a0]" />
               <span>PRÉSENTATION DU SERVICE</span>
             </div>
             <p className="text-xs sm:text-sm md:text-[14px] text-neutral-300 leading-relaxed">
@@ -132,7 +132,7 @@ export default function ServiceModal({ service, onClose }) {
           {/* Deliverables / Scope */}
           {service.deliverables && service.deliverables.length > 0 && (
             <div className="space-y-3 mb-6 sm:mb-8">
-              <div className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-[#a3e635] flex items-center gap-2">
+              <div className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-[#10d9a0] flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4" />
                 <span>CE QUI EST INCLUS DANS CE SERVICE</span>
               </div>
@@ -142,7 +142,7 @@ export default function ServiceModal({ service, onClose }) {
                     key={idx}
                     className="p-3 rounded-xl bg-white/[0.02] border border-white/10 text-xs text-neutral-300 flex items-start gap-2.5"
                   >
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#a3e635] shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#10d9a0] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </div>
                 ))}
@@ -154,7 +154,7 @@ export default function ServiceModal({ service, onClose }) {
           {service.technologies && service.technologies.length > 0 && (
             <div className="space-y-3 mb-6 sm:mb-8">
               <div className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-neutral-400 flex items-center gap-2">
-                <Cpu className="w-4 h-4 text-[#a3e635]" />
+                <Cpu className="w-4 h-4 text-[#10d9a0]" />
                 <span>TECHNOLOGIES & LOGOS OFFICIELS</span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -163,13 +163,13 @@ export default function ServiceModal({ service, onClose }) {
                   return (
                     <div
                       key={idx}
-                      className="p-3.5 rounded-xl bg-[#0a0a0a] border border-white/10 hover:border-[#a3e635]/40 transition-colors flex items-center gap-3.5 group"
+                      className="p-3.5 rounded-xl bg-[#0a0a0a] border border-white/10 hover:border-[#10d9a0]/40 transition-colors flex items-center gap-3.5 group"
                     >
-                      <div className="w-10 h-10 rounded-lg bg-white/[0.04] border border-white/10 flex items-center justify-center text-neutral-300 group-hover:text-[#a3e635] group-hover:scale-110 transition-all shrink-0">
+                      <div className="w-10 h-10 rounded-lg bg-white/[0.04] border border-white/10 flex items-center justify-center text-neutral-300 group-hover:text-[#10d9a0] group-hover:scale-110 transition-all shrink-0">
                         {Icon ? <Icon className="w-5 h-5" /> : <Layers className="w-5 h-5" />}
                       </div>
                       <div className="min-w-0">
-                        <div className="text-xs sm:text-sm font-display font-black text-white group-hover:text-[#a3e635] transition-colors truncate">
+                        <div className="text-xs sm:text-sm font-display font-black text-white group-hover:text-[#10d9a0] transition-colors truncate">
                           {tech.name}
                         </div>
                         <div className="text-[11px] font-mono text-neutral-400 truncate">
@@ -187,7 +187,7 @@ export default function ServiceModal({ service, onClose }) {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 pt-5 sm:pt-6 border-t border-white/10 w-full">
             <button
               onClick={handleDiscussClick}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl text-xs font-display font-black uppercase tracking-wider bg-[#a3e635] text-black hover:bg-[#84cc16] transition-colors shadow-lg cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl text-xs font-display font-black uppercase tracking-wider bg-[#10d9a0] text-black hover:bg-[#0fd098] transition-colors shadow-lg cursor-pointer"
             >
               <span>DISCUTER DE CE SERVICE</span>
               <ArrowUpRight className="w-4 h-4" />

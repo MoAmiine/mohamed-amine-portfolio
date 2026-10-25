@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { personalInfo } from '../data/portfolioData';
 import { Mail, Phone, Copy, Check, Send, Sparkles } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './Icons';

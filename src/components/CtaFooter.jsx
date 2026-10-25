@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { personalData } from '../data/portfolioData';
 import { ArrowUpRight, Copy, Check, Phone, Mail, ArrowUp, FileText } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, InstagramIcon } from './Icons';
@@ -25,13 +25,13 @@ export default function CtaFooter({ onShowToast, onOpenCv }) {
         {/* Giant PARLONS-EN / LET'S TALK Banner */}
         <div className="space-y-6 sm:space-y-8 border-b border-neutral-800 pb-12 sm:pb-20">
           <div className="section-pill-dark">
-            <span className="text-[#a3e635]">●</span>
+            <span className="text-[#10d9a0]">●</span>
             <span>DISPONIBLE POUR NOUVEAUX DÉFIS</span>
           </div>
 
           <div className="space-y-3 sm:space-y-4">
             <h2 className="text-5xl sm:text-8xl xl:text-9xl font-display font-black tracking-[-0.06em] text-white uppercase leading-[0.85] break-words">
-              PARLONS<span className="text-[#a3e635]">-</span>EN.
+              PARLONS<span className="text-[#10d9a0]">-</span>EN.
             </h2>
             <div className="text-base sm:text-2xl font-mono text-neutral-400">
               LET'S BUILD SOMETHING EXTRAORDINARY.
@@ -43,17 +43,17 @@ export default function CtaFooter({ onShowToast, onOpenCv }) {
             <a
               href={`mailto:${personalData.email}`}
               onClick={handleCopyEmail}
-              className="group inline-flex flex-wrap items-center gap-2.5 sm:gap-3 text-base xs:text-lg sm:text-2xl lg:text-3xl font-mono font-bold lowercase text-white hover:text-[#a3e635] transition-colors relative break-all sm:break-normal max-w-full"
+              className="group inline-flex flex-wrap items-center gap-2.5 sm:gap-3 text-base xs:text-lg sm:text-2xl lg:text-3xl font-mono font-bold lowercase text-white hover:text-[#10d9a0] transition-colors relative break-all sm:break-normal max-w-full"
             >
               <span className="relative lowercase">
                 {personalData.email}
-                <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#a3e635] group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#10d9a0] group-hover:w-full transition-all duration-300"></span>
               </span>
               <span
-                className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-white/20 group-hover:border-[#a3e635] flex items-center justify-center text-xs font-bold shrink-0 transition-transform group-hover:scale-110"
+                className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-white/20 group-hover:border-[#10d9a0] flex items-center justify-center text-xs font-bold shrink-0 transition-transform group-hover:scale-110"
                 title="Copier l'adresse email"
               >
-                {copied ? <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#a3e635]" /> : <Copy className="w-3.5 h-3.5 sm:w-4 sm:h-4" />}
+                {copied ? <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#10d9a0]" /> : <Copy className="w-3.5 h-3.5 sm:w-4 sm:h-4" />}
               </span>
             </a>
           </div>
@@ -62,9 +62,9 @@ export default function CtaFooter({ onShowToast, onOpenCv }) {
           <div className="pt-2 sm:pt-3">
             <button
               onClick={onOpenCv}
-              className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full text-xs font-mono font-bold uppercase tracking-wider bg-white/[0.04] hover:bg-[#a3e635] text-neutral-300 hover:text-black border border-white/10 hover:border-[#a3e635] transition-all cursor-pointer group shadow-lg"
+              className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full text-xs font-mono font-bold uppercase tracking-wider bg-white/[0.04] hover:bg-[#10d9a0] text-neutral-300 hover:text-black border border-white/10 hover:border-[#10d9a0] transition-all cursor-pointer group shadow-lg"
             >
-              <FileText className="w-3.5 h-3.5 text-[#a3e635] group-hover:text-black transition-colors" />
+              <FileText className="w-3.5 h-3.5 text-[#10d9a0] group-hover:text-black transition-colors" />
               <span>CONSULTER LE CV (PDF)</span>
             </button>
           </div>
@@ -73,7 +73,7 @@ export default function CtaFooter({ onShowToast, onOpenCv }) {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 pt-4 sm:pt-6 text-xs font-mono">
             <div>
               <div className="text-neutral-500 uppercase mb-1">Téléphone direct</div>
-              <a href={`tel:${personalData.phone}`} className="text-sm font-bold text-white hover:text-[#a3e635] transition-colors">
+              <a href={`tel:${personalData.phone}`} className="text-sm font-bold text-white hover:text-[#10d9a0] transition-colors">
                 {personalData.phone}
               </a>
             </div>
@@ -83,7 +83,7 @@ export default function CtaFooter({ onShowToast, onOpenCv }) {
                 href={personalData.socials.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-sm font-bold text-[#a3e635] hover:underline"
+                className="inline-flex items-center gap-1.5 text-sm font-bold text-[#10d9a0] hover:underline"
               >
                 <LinkedinIcon className="w-3.5 h-3.5" />
                 <span>LinkedIn Profile</span>
@@ -96,8 +96,8 @@ export default function CtaFooter({ onShowToast, onOpenCv }) {
             </div>
             <div>
               <div className="text-neutral-500 uppercase mb-1">Statut actuel</div>
-              <div className="text-sm font-bold text-[#a3e635] flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-[#a3e635] animate-pulse shrink-0"></span>
+              <div className="text-sm font-bold text-[#10d9a0] flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-[#10d9a0] animate-pulse shrink-0"></span>
                 <span>{personalData.status}</span>
               </div>
               <div className="text-[11px] text-neutral-400 font-mono mt-0.5">
@@ -112,7 +112,7 @@ export default function CtaFooter({ onShowToast, onOpenCv }) {
           
           {/* Logo */}
           <a href="#" className="font-display text-lg font-black text-white">
-            MoAmiine<span className="text-[#a3e635]">.dev</span>
+            MoAmiine<span className="text-[#10d9a0]">.dev</span>
           </a>
 
           {/* Nav Links */}
@@ -131,7 +131,7 @@ export default function CtaFooter({ onShowToast, onOpenCv }) {
                 href={personalData.socials.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-[#a3e635] transition-colors"
+                className="hover:text-[#10d9a0] transition-colors"
                 title="GitHub"
               >
                 <GithubIcon className="w-4 h-4" />
@@ -140,7 +140,7 @@ export default function CtaFooter({ onShowToast, onOpenCv }) {
                 href={personalData.socials.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-[#a3e635] transition-colors"
+                className="hover:text-[#10d9a0] transition-colors"
                 title="LinkedIn"
               >
                 <LinkedinIcon className="w-4 h-4" />
@@ -149,7 +149,7 @@ export default function CtaFooter({ onShowToast, onOpenCv }) {
                 href={personalData.socials.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-[#a3e635] transition-colors"
+                className="hover:text-[#10d9a0] transition-colors"
                 title="Instagram"
               >
                 <InstagramIcon className="w-4 h-4" />
@@ -158,7 +158,7 @@ export default function CtaFooter({ onShowToast, onOpenCv }) {
 
             <button
               onClick={scrollToTop}
-              className="p-2 sm:p-2.5 rounded-full border border-white/10 hover:border-[#a3e635] text-white hover:text-[#a3e635] transition-all cursor-pointer"
+              className="p-2 sm:p-2.5 rounded-full border border-white/10 hover:border-[#10d9a0] text-white hover:text-[#10d9a0] transition-all cursor-pointer"
               title="Retour en haut"
             >
               <ArrowUp className="w-4 h-4" />

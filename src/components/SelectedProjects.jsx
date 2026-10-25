@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { projectsData } from '../data/portfolioData';
 import { ArrowUpRight, Layers, Sparkles } from 'lucide-react';
 import { playClick } from '../utils/audio';
